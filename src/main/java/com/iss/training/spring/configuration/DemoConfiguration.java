@@ -14,4 +14,8 @@ public class DemoConfiguration {
         return user;
     }
 
+    @Bean
+    public String redirectURL (){
+        return "http://mysite.com";
+    }
 }
