@@ -3,6 +3,10 @@ package com.iss.training.spring.beans;
 public class User {
     private String name;
 
+    public User(){
+        System.out.println("In User's constructor ..");
+    }
+
     public String getName() {
         return name;
     }
