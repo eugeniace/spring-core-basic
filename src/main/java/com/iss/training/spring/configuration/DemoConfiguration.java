@@ -1,15 +1,16 @@
 package com.iss.training.spring.configuration;
 
 import com.iss.training.spring.beans.User;
+import org.springframework.beans.factory.annotation.Lookup;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
 @Configuration
-public class DemoConfiguration {
+public abstract class DemoConfiguration {
 
     @Bean
-   // @Scope("prototype")
+    @Scope("prototype")
     public User user(){
         User user = new User();
         user.setName("username.configured");
@@ -20,4 +21,5 @@ public class DemoConfiguration {
     public String redirectURL (){
         return "http://mysite.com";
     }
+
 }

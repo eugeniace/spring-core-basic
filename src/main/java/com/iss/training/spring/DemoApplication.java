@@ -14,5 +14,8 @@ public class DemoApplication {
         LoginInfo loginInfo = (LoginInfo) context.getBean("loginInfo");
         ApplicationInfo applicationInfo = (ApplicationInfo) context.getBean("applicationInfo");
 
+        System.out.println("loginInfo = "+loginInfo);
+        System.out.println("applicationInfo = "+applicationInfo);
+        applicationInfo.process("Eugenia");
     }
 }
